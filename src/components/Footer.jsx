@@ -1,5 +1,5 @@
 import FooterLogo from "/FooterLOGO.png";
-import "../styledoss/cssFooter.scss";
+import "../styledoss/Footer.scss";
 
 function Footer() {
   return (

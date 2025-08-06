@@ -1,11 +1,8 @@
-import { StrictMode } from "react";
-import "./index.css";
-import Accueil from "./pages/Accueil.jsx";
+import Welcome from "./pages/Welcome.jsx";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout.jsx";
-import Header from "./components/Header.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -15,7 +12,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           path="/"
           element={
             <Layout>
-              <Accueil />
+              <Welcome />
             </Layout>
           }
         />

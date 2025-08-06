@@ -10,6 +10,8 @@ main {
   position: relative;
   width: 100%;
   height: 223px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
 }
 
 .welcome-Pic-Text img {
@@ -33,7 +35,7 @@ main {
 }
 
 .welcome-Pic-Text .opacifier h1 {
-  font: 700 48px "Montserrat", sans-serif;
+  font: 700 48px sans-serif;
   line-height: 143%;
   color: #fff;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -44,4 +46,5 @@ main {
   z-index: 2;
   align-self: anchor-center;
   padding-bottom: 10px;
+  -webkit-text-stroke: 1px black;
 }
