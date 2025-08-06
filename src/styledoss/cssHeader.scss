@@ -1,0 +1,31 @@
+header {
+  padding: 45px 100px 50px 100px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.nav-header {
+  width: 25%;
+}
+
+.nav-header ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-header ul li {
+  list-style: none;
+  font-family: "montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 143%;
+}
+
+.nav-header ul li:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  /* Responsive styles will be done later */
+}

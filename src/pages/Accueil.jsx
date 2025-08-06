@@ -1,8 +1,15 @@
-export default function Accueil() {
+import WelcomePic from "/welcomepic.png";
+import "../styledoss/cssAccueil.scss";
+
+function Accueil() {
   return (
-    <div>
-      <h1>Page d'accueil 🏠</h1>
-      <p>Ceci est la page d'accueil</p>
+    <div className="welcome-Pic-Text">
+      <img src={WelcomePic} alt="Accueil" />
+      <div className="opacifier">
+        <h1>Chez vous, partout et ailleurs</h1>
+      </div>
     </div>
   );
 }
+
+export default Accueil;
