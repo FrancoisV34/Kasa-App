@@ -3,6 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout.jsx";
+import Lodging from "./pages/Lodging.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -13,6 +14,14 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           element={
             <Layout>
               <Welcome />
+            </Layout>
+          }
+        />
+        <Route
+          path="/logement/:logementId"
+          element={
+            <Layout>
+              <Lodging />
             </Layout>
           }
         />
