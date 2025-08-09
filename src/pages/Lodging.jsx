@@ -4,6 +4,7 @@ import "../styledoss/Lodging.scss";
 import Description from "../components/Description.jsx";
 import React from "react";
 import Equipments from "../components/Equipments.jsx";
+import Carrousel from "../components/Carrousel.jsx";
 
 function Lodging() {
   const { logementId } = useParams();
@@ -22,16 +23,7 @@ function Lodging() {
   return (
     <>
       <div className="lodging-page">
-        <div className="lodging-pic-arrow">
-          <div className="prev-arrow">⬅️</div>
-          {logement.pictures.map((picture, index) => (
-            <img src={picture} key={index} />
-          ))}
-          {/*<div className="pic-number">{index + "/" + index.length - 1}</div> 
-          car index pas encore définie et pas encore mis en place la séléction
-          de l'image correspondante à l'index*/}
-          <div className="next-arrow">➡️</div>
-        </div>
+        <Carrousel />
         <div className="lodging-info">
           <div className="title-hostName-pic">
             <div className="title-loc">

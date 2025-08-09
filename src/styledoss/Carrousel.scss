@@ -1,0 +1,29 @@
+/*lodging pics + carousel layout */
+
+.lodging-pic-arrow {
+  width: 100%;
+  height: 415px;
+  border-radius: 25px;
+}
+.lodging-pic-arrow .carrousel-img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 25px;
+  object-position: center;
+}
+
+.prev-arrow {
+  position: absolute;
+  z-index: 2;
+  top: 55%;
+  width: 100%;
+}
+
+.next-arrow {
+  position: absolute;
+  z-index: 2;
+  top: 55%;
+  width: 100%;
+  left: 86%;
+}
