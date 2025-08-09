@@ -9,6 +9,10 @@ function Header() {
     navigate("/");
   }
 
+  function handleAproposClick() {
+    navigate("/a-propos");
+  }
+
   return (
     <header>
       <img src={Logo} alt="Kasa Logo" />
@@ -17,7 +21,9 @@ function Header() {
           <li role="button" onClick={handleHomepageClick}>
             Accueil
           </li>
-          <li>A Propos</li>
+          <li role="button" onClick={handleAproposClick}>
+            A Propos
+          </li>
         </ul>
       </div>
     </header>

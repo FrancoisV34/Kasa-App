@@ -103,7 +103,7 @@ function Lodging() {
                 onClick={toggleEquipmentsDropDown}
                 aria-expanded={isEquipmentsOpen}
               >
-                Equipements
+                Équipements
                 <img
                   src="/Dropdvector.png"
                   alt="Vector for dropdown"
