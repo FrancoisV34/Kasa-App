@@ -2,7 +2,7 @@ import Logements from "../../logements.json";
 import "../styledoss/Gallery.scss";
 import { useNavigate } from "react-router-dom";
 
-export default function Gallery() {
+function Gallery() {
   const navigate = useNavigate();
 
   function handleCardClick(logement) {
@@ -25,3 +25,5 @@ export default function Gallery() {
     </div>
   );
 }
+
+export default Gallery;

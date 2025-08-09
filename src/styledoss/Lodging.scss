@@ -53,6 +53,7 @@
 .title-hostName-pic .name-pic {
   display: flex;
   align-items: center;
+  gap: 10px;
   font-weight: 500;
   font-size: 18px;
   line-height: 143%;
@@ -70,20 +71,75 @@
   display: flex;
   flex-direction: row;
   gap: 30px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .lodging-info .tags {
-  background-color: #ff6060;
   color: #fff;
-  display: inline-block;
-  border-radius: 10px;
-  padding: 3px;
+  display: flex;
+  gap: 10px;
 }
 
 .lodging-info .tags .tag {
-  margin: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 143%;
   font-family: "Montserrat", sans-serif;
+  background-color: #ff6060;
+  border-radius: 10px;
+  padding: 3px 20px;
+}
+
+.grey-star {
+  color: #e3e3e3;
+}
+
+.lodging-info .tag-and-rate .rate-stars {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.lodging-info .tag-and-rate .rate-stars .star {
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+  line-height: 36px;
+  font-size: 36px;
+}
+
+/*description and equipments dropdown*/
+
+.drop-down {
+  display: flex;
+  gap: 76px;
+}
+
+.description,
+.equipments {
+  width: 100%;
+  margin: 25px 0 50px 0;
+}
+
+.desc-button,
+.equip-button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  line-height: 52px;
+  font-family: "montserrat";
+  font-weight: 700;
+  font-size: 18px;
+  background-color: #ff6060;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+}
+
+.openindicator {
+  height: 26%;
+  width: 4%;
+  align-self: center;
+  margin-right: 20px;
 }
