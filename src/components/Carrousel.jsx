@@ -18,48 +18,32 @@ function Carrousel() {
   };
 
   return (
-    <div className="lodging-pic-arrow">
-      <div className="prev-arrow">
-        <img
-          role="button"
-          onClick={prevImage}
-          aria-label="Image précédente"
-          src="/Dropdvector.png"
-          alt="Vector for previous into carrousel"
-          className="prev-image"
-          style={{
-            transform: "rotate(270deg)",
-            objectFit: "cover",
-            width: "5%",
-            height: "20%",
-            borderRadius: "none",
-          }}
-        />
+    <div
+      className="lodging-pic-arrow"
+      style={{
+        backgroundImage: `url(${logement.pictures[index]})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div
+        className="prev-arrow"
+        role="button"
+        onClick={nextImage}
+        aria-label="Image suivante"
+      >
+        &#x2039;
       </div>
-      <img
-        src={logement.pictures[index]}
-        alt={"Image n° + ${index +1}"}
-        className="carrousel-img"
-      />
       <div className="carrousel-counter">
         {index + 1} / {logement.pictures.length}
       </div>
-      <div className="next-arrow">
-        <img
-          role="button"
-          onClick={nextImage}
-          aria-label="Image suivante"
-          src="/Dropdvector.png"
-          alt="Vector for previous into carrousel"
-          className="next-image"
-          style={{
-            transform: "rotate(90deg)",
-            objectFit: "cover",
-            width: "5%",
-            height: "20%",
-            borderRadius: "none",
-          }}
-        />
+      <div
+        className="next-arrow"
+        role="button"
+        onClick={nextImage}
+        aria-label="Image suivante"
+      >
+        &#x203A;
       </div>
     </div>
   );
