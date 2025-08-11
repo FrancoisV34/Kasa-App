@@ -5,20 +5,22 @@ import Description from "../components/Description.jsx";
 import React from "react";
 import Equipments from "../components/Equipments.jsx";
 import Carrousel from "../components/Carrousel.jsx";
+import Error from "./Error.jsx";
 
 function Lodging() {
   const { logementId } = useParams();
   const logement = Logements.find((l) => l.id === logementId);
+
+  if (!logement) {
+    return <Error />;
+  }
+
   const lodgeRate = Number(logement.rating);
   const maxRate = 5;
   const [isDescriptionOpen, setIsDescriptionOpen] = React.useState(false);
   const toggleDescriptionDropDown = () => setIsDescriptionOpen((prev) => !prev);
   const [isEquipmentsOpen, setIsEquipmentsOpen] = React.useState(false);
   const toggleEquipmentsDropDown = () => setIsEquipmentsOpen((prev) => !prev);
-
-  if (!logement) {
-    return <p>Pas trouvé</p>;
-  }
 
   return (
     <>

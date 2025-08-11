@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout.jsx";
 import Lodging from "./pages/Lodging.jsx";
 import About from "./pages/About.jsx";
+import Error from "./pages/Error.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -34,6 +35,14 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             </Layout>
           }
         ></Route>
+        <Route
+          path="*"
+          element={
+            <Layout>
+              <Error />
+            </Layout>
+          }
+        />
       </Routes>
     </Router>
   </React.StrictMode>
