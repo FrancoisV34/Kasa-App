@@ -1,7 +1,11 @@
+/*ok a part media queries*/
+
+@use "../Abstracts/_Mixins.scss" as mix;
+@use "../Abstracts/_Variables.scss" as *;
+
 header {
   padding: 45px 100px 50px 100px;
-  display: flex;
-  justify-content: space-between;
+  @include mix.flex-space-between;
   flex-direction: row;
 }
 
@@ -10,16 +14,14 @@ header {
 }
 
 .nav-header ul {
-  display: flex;
-  justify-content: space-between;
+  @include mix.flex-space-between;
 }
 
 .nav-header ul li {
   list-style: none;
-  font-family: "montserrat", sans-serif;
+  @include mix.general-text-carac;
   font-size: 24px;
   font-weight: 500;
-  line-height: 143%;
   cursor: pointer;
 }
 

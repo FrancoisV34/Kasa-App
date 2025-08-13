@@ -2,3 +2,8 @@
   font-family: "Montserrat", sans-serif;
   line-height: 143%;
 }
+
+@mixin flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}

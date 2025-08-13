@@ -1,18 +1,21 @@
+/* ok a part media queries */
+
+@use "../Abstracts/_Variables.scss" as *;
+@use "../Abstracts/_Mixins.scss" as mix;
+
 h1 {
-  font-family: "Montserrat", sans-serif;
+  @include mix.general-text-carac;
   font-weight: 700;
   font-size: 288px;
-  line-height: 143%;
   margin: 0;
-  color: #ff6060;
+  color: $primary-color;
 }
 
 .error-page p {
-  font-family: "Montserrat", sans-serif;
+  @include mix.general-text-carac;
   font-weight: 500;
   font-size: 36px;
-  line-height: 143%;
-  color: #ff6060;
+  color: $primary-color;
 }
 
 .error-page {
@@ -27,10 +30,9 @@ h1 {
 a {
   text-decoration: none;
   color: black;
-  font-family: "Montserrat", sans-serif;
+  @include mix.general-text-carac;
   font-weight: 500;
   font-size: 18px;
-  line-height: 143%;
 }
 
 .error-page a:hover {

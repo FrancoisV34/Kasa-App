@@ -1,5 +1,7 @@
 @use "../Abstracts/_Variables.scss" as *;
-@use "../Abstracts/_Mixins.scss" as *;
+@use "../Abstracts/_Mixins.scss" as mix;
+
+/* ok a part media queries */
 
 .about-content {
   display: flex;
@@ -39,7 +41,7 @@
       color: $secondary-color;
       border-radius: 5px;
       padding: 10px 20px 10px 15px;
-      @include general-text-carac;
+      @include mix.general-text-carac;
       font-weight: 700;
       font-size: 24px;
       vertical-align: middle;
@@ -52,7 +54,7 @@
       padding: 20px;
       max-width: fit-content;
       margin: 0;
-      @include general-text-carac;
+      @include mix.general-text-carac;
       font-weight: 400;
       font-size: 18px;
     }
@@ -74,7 +76,7 @@
   display: flex;
   justify-content: space-between;
   padding: 10px 20px 10px 15px;
-  @include general-text-carac;
+  @include mix.general-text-carac;
   font-weight: 700;
   font-size: 24px;
   vertical-align: middle;
@@ -85,5 +87,5 @@
   border-radius: 0 0 10px 10px;
   font-weight: 400;
   font-size: 18px;
-  @include general-text-carac;
+  @include mix.general-text-carac;
 }

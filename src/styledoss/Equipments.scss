@@ -1,16 +1,20 @@
+/* ok a part media queries */
+
+@use "../Abstracts/_Variables.scss" as *;
+@use "../Abstracts/_Mixins.scss" as mix;
+
 .equip-list {
   list-style: none;
 }
 
 .equip-content {
-  background-color: #f6f6f6;
+  background-color: $div-bg-color;
   color: #000;
   border-radius: 0 0 10px 10px;
   padding: 20px;
-  font-family: Montserrat;
+  @include mix.general-text-carac;
   font-weight: 400;
   font-size: 18px;
-  line-height: 143%;
 }
 
 .equip-content ul {
