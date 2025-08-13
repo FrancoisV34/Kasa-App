@@ -5,7 +5,7 @@ import "../styledoss/Description.scss";
 function Description() {
   const { logementId } = useParams();
   const logement = Logements.find((l) => l.id === logementId);
-  return <div className="desc-content">{logement.description}</div>;
+  return <p>{logement.description}</p>;
 }
 
 export default Description;

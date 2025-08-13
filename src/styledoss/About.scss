@@ -1,3 +1,6 @@
+@use "../Abstracts/_Variables.scss" as *;
+@use "../Abstracts/_Mixins.scss" as *;
+
 .about-content {
   display: flex;
   flex-direction: column;
@@ -20,11 +23,43 @@
 }
 
 .dropdown-about {
-  margin-bottom: 38px;
+  margin: 38px auto;
+  width: 83%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  div {
+    width: 100%;
+    button {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      border: none;
+      background-color: $primary-color;
+      color: $secondary-color;
+      border-radius: 5px;
+      padding: 10px 20px 10px 15px;
+      @include general-text-carac;
+      font-weight: 700;
+      font-size: 24px;
+      vertical-align: middle;
+    }
+    .desc-content {
+      background-color: $div-bg-color;
+      border-radius: 5px;
+      color: black;
+      border-radius: 0 0 10px 10px;
+      padding: 20px;
+      max-width: fit-content;
+      margin: 0;
+      @include general-text-carac;
+      font-weight: 400;
+      font-size: 18px;
+    }
+  }
 }
-
 .dropdown-text {
-  background-color: #f6f6f6;
+  background-color: $div-bg-color;
   display: flex;
   flex-direction: column;
   margin: 30px 108px 0 108px;
@@ -33,24 +68,22 @@
 
 .dropdown-text button {
   border: none;
-  background-color: #ff6060;
-  color: #fff;
+  background-color: $primary-color;
+  color: $secondary-color;
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
   padding: 10px 20px 10px 15px;
-  font-family: "Montserrat", sans-serif;
+  @include general-text-carac;
   font-weight: 700;
   font-size: 24px;
-  line-height: 143%;
   vertical-align: middle;
 }
 
 .dropdown-text div {
   padding: 20px;
   border-radius: 0 0 10px 10px;
-  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 18px;
-  line-height: 143%;
+  @include general-text-carac;
 }

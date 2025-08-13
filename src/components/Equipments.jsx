@@ -7,15 +7,13 @@ function Equipments() {
   const logement = Logements.find((l) => l.id === logementId);
 
   return (
-    <div className="equip-content">
-      <ul>
-        {logement.equipments.map((equipement, index) => (
-          <li key={index} className="equip-list">
-            {equipement}
-          </li>
-        ))}
-      </ul>
-    </div>
+    <ul>
+      {logement.equipments.map((equipement, index) => (
+        <li key={index} className="equip-list">
+          {equipement}
+        </li>
+      ))}
+    </ul>
   );
 }
 export default Equipments;

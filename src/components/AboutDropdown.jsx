@@ -5,7 +5,7 @@ function AboutDropdown({ title, description }) {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <div className="dropdown-text">
+    <div>
       <button onClick={() => setIsOpen((prev) => !prev)}>
         {title}
         <img
@@ -13,14 +13,14 @@ function AboutDropdown({ title, description }) {
           alt="dropdown vector"
           style={{
             transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
-            transition: "transform 0.3sec ease",
+            transition: "transform 0.3s ease",
             height: "14px",
             width: "24px",
             alignSelf: "center",
           }}
         ></img>
       </button>
-      {isOpen && <div>{description}</div>}
+      {isOpen && <div className="desc-content">{description}</div>}
     </div>
   );
 }

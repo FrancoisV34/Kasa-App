@@ -6,6 +6,7 @@ import React from "react";
 import Equipments from "../components/Equipments.jsx";
 import Carrousel from "../components/Carrousel.jsx";
 import Error from "./Error.jsx";
+import AboutDropdown from "../components/AboutDropdown.jsx";
 
 function Lodging() {
   const { logementId } = useParams();
@@ -66,56 +67,8 @@ function Lodging() {
             </div>
           </div>
           <div className="drop-down">
-            <div className="description">
-              <button
-                className="desc-button"
-                onClick={toggleDescriptionDropDown}
-                aria-expanded={isDescriptionOpen}
-              >
-                Description
-                <img
-                  src="/Dropdvector.png"
-                  alt="Vector for dropdown"
-                  className="openindicator"
-                  style={{
-                    transition: "transform 0.3s ease",
-                    transform: isDescriptionOpen
-                      ? "rotate(180deg)"
-                      : "rotate(0deg)",
-                  }}
-                />
-              </button>
-              {isDescriptionOpen && (
-                <div className="description-text">
-                  <Description />
-                </div>
-              )}
-            </div>
-            <div className="equipments">
-              <button
-                className="equip-button"
-                onClick={toggleEquipmentsDropDown}
-                aria-expanded={isEquipmentsOpen}
-              >
-                Équipements
-                <img
-                  src="/Dropdvector.png"
-                  alt="Vector for dropdown"
-                  className="openindicator"
-                  style={{
-                    transition: "transform 0.3s ease",
-                    transform: isEquipmentsOpen
-                      ? "rotate(180deg)"
-                      : "rotate(0deg)",
-                  }}
-                />
-              </button>
-              {isEquipmentsOpen && (
-                <div className="equipments-text">
-                  <Equipments />
-                </div>
-              )}
-            </div>
+            <AboutDropdown title="Description" description={<Description />} />
+            <AboutDropdown title="Équipements" description={<Equipments />} />
           </div>
         </div>
       </div>

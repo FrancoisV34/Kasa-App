@@ -29,13 +29,15 @@ function Carrousel() {
       <div
         className="prev-arrow"
         role="button"
-        onClick={nextImage}
+        onClick={prevImage}
         aria-label="Image suivante"
       >
         &#x2039;
       </div>
       <div className="carrousel-counter">
-        {index + 1} / {logement.pictures.length}
+        {logement.pictures.length === 1
+          ? null
+          : `${index + 1} / ${logement.pictures.length}`}
       </div>
       <div
         className="next-arrow"
