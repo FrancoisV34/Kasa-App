@@ -32,7 +32,7 @@ function Carrousel() {
         onClick={prevImage}
         aria-label="Image suivante"
       >
-        &#x2039;
+        {logement.pictures.length === 1 ? null : "\u2039"}
       </div>
       <div className="carrousel-counter">
         {logement.pictures.length === 1
@@ -45,7 +45,7 @@ function Carrousel() {
         onClick={nextImage}
         aria-label="Image suivante"
       >
-        &#x203A;
+        {logement.pictures.length === 1 ? null : `\u203A`}
       </div>
     </div>
   );

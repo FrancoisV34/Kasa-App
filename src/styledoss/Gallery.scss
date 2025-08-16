@@ -11,6 +11,8 @@
   display: flex;
   flex-wrap: wrap;
   padding: 45px 50px;
+  overflow: auto;
+  max-height: 750px;
 }
 
 .gallery-content .cards-gallery {
