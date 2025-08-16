@@ -11,18 +11,16 @@ header {
 
 .nav-header {
   width: 25%;
-}
-
-.nav-header ul {
-  @include mix.flex-space-between;
-}
-
-.nav-header ul li {
-  list-style: none;
-  @include mix.general-text-carac;
-  font-size: 24px;
-  font-weight: 500;
-  cursor: pointer;
+  ul {
+    @include mix.flex-space-between;
+    li {
+      list-style: none;
+      @include mix.general-text-carac;
+      font-size: 24px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+  }
 }
 
 .nav-header ul li:hover {
@@ -30,5 +28,24 @@ header {
 }
 
 @media (max-width: 768px) {
-  /* Responsive styles will be done later */
+  header {
+    padding: 20px;
+    margin-bottom: 7px;
+    img {
+      width: 43%;
+      height: 100%;
+    }
+    .nav-header {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      ul {
+        gap: 26px;
+        li {
+          font-size: $font-size-mobile;
+        }
+      }
+    }
+  }
 }

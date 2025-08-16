@@ -11,91 +11,93 @@
 
 .lodging-info {
   color: $primary-color;
+  display: flex;
+  justify-content: space-between;
+  .tags {
+    color: $secondary-color;
+    display: flex;
+    gap: 10px;
+    .tag {
+      font-weight: 700;
+      font-size: 14px;
+      @include mix.general-text-carac;
+      background-color: $primary-color;
+      border-radius: 10px;
+      padding: 3px 20px;
+    }
+  }
 }
 
-.title-hostName-pic {
-  @include mix.flex-space-between;
-  align-items: center;
-  color: $primary-color;
-}
-
-.title-hostName-pic .title-loc {
+.title-loc-tags {
   display: flex;
   flex-direction: column;
+  color: $primary-color;
+  justify-content: space-between;
+  .title-loc {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    .loc {
+      color: black;
+      font-weight: 500;
+      font-size: 18px;
+      @include mix.general-text-carac;
+    }
+  }
+  h2 {
+    display: inline-block;
+    justify-self: flex-start;
+    font-weight: 500;
+    font-size: 36px;
+    @include mix.general-text-carac;
+    margin: 0;
+    text-shadow: 0px 1px 1px rgba(101, 91, 91, 0.25);
+  }
 }
 
-.title-loc .loc {
-  color: black;
-  font-weight: 500;
-  font-size: 18px;
-  @include mix.general-text-carac;
-}
-
-.title-hostName-pic h2 {
-  display: inline-block;
-  justify-self: flex-start;
-  font-weight: 500;
-  font-size: 36px;
-  @include mix.general-text-carac;
-  margin: 0;
-  text-shadow: 0px 1px 1px rgba(101, 91, 91, 0.25);
-}
-
-.title-hostName-pic .name-pic {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 500;
-  font-size: 18px;
-  @include mix.general-text-carac;
-}
-
-.name-pic img {
-  object-fit: cover;
-  border-radius: 50%;
-  max-width: 64px;
-  max-height: 64px;
-}
-
-.tag-and-rate {
-  flex-direction: row;
+.hostname-pic-rate {
+  flex-direction: column;
   gap: 30px;
   align-items: center;
   @include mix.flex-space-between;
   margin-top: 20px;
+  .name-pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    span {
+      font-weight: 500;
+      font-size: 18px;
+      @include mix.general-text-carac;
+      color: $primary-color;
+      text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    }
+    img {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+    }
+  }
 }
 
-.lodging-info .tags {
-  color: $secondary-color;
-  display: flex;
-  gap: 10px;
-}
-
-.lodging-info .tags .tag {
-  font-weight: 700;
-  font-size: 14px;
-  @include mix.general-text-carac;
-  background-color: $primary-color;
-  border-radius: 10px;
-  padding: 3px 20px;
+.hostname-pic-rate {
+  .rate-stars {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    .star {
+      width: 36px;
+      height: 36px;
+      display: inline-block;
+      line-height: 36px;
+      font-size: 36px;
+    }
+  }
 }
 
 .grey-star {
   color: #e3e3e3;
-}
-
-.lodging-info .tag-and-rate .rate-stars {
-  display: flex;
-  flex-direction: row;
-  gap: 4px;
-}
-
-.lodging-info .tag-and-rate .rate-stars .star {
-  width: 36px;
-  height: 36px;
-  display: inline-block;
-  line-height: 36px;
-  font-size: 36px;
 }
 
 /*description and equipments dropdown*/
@@ -136,5 +138,140 @@
     border-radius: 5px;
     border: none;
     padding-left: 20px;
+  }
+}
+
+/* media queries */
+@media (max-width: 768px) {
+  .lodging-info {
+    flex-direction: column;
+    .title-loc-tags {
+      gap: 15px;
+      .title-loc {
+        .title {
+          font-size: 18px;
+          @include mix.general-text-carac;
+          font-weight: 500;
+        }
+        .loc {
+          font-size: 14px;
+          @include mix.general-text-carac;
+          font-weight: 500;
+        }
+      }
+      .tags {
+        align-items: center;
+        .tag {
+          font-size: 10px;
+          @include mix.general-text-carac;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .lodging-info {
+    .hostname-pic-rate {
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      .name-pic {
+        span {
+          font-size: 12px;
+          @include mix.general-text-carac;
+          font-weight: 500;
+        }
+        img {
+          width: 33px;
+          height: 33px;
+        }
+      }
+      .rate-stars {
+        .star {
+          width: 24px;
+          height: 24px;
+          line-height: 24px;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  .drop-down {
+    flex-direction: column;
+    gap: 20px;
+    button {
+      font-size: 13px;
+      @include mix.general-text-carac;
+      font-weight: 700;
+      line-height: 30px;
+      padding-right: 10px;
+    }
+    div {
+      .desc-content {
+        padding: 20px 0 20px 0;
+        p,
+        li {
+          @include mix.general-text-carac;
+          font-weight: 400;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .drop-down {
+    flex-direction: column;
+    gap: 20px;
+    button {
+      font-size: 13px;
+      @include mix.general-text-carac;
+      font-weight: 700;
+      line-height: 30px;
+      padding-right: 10px;
+    }
+    div {
+      .desc-content {
+        padding: 20px 0 20px 0;
+        p,
+        li {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 450px) {
+  .lodging-info {
+    .title-loc-tags {
+      .tags {
+        .tag {
+          font-size: 7px;
+          @include mix.general-text-carac;
+          font-weight: 700;
+        }
+      }
+    }
+    .hostname-pic-rate {
+      .name-pic {
+        span {
+          font-size: 12px;
+          @include mix.general-text-carac;
+          font-weight: 500;
+        }
+        img {
+          width: 33px;
+          height: 33px;
+        }
+      }
+      .rate-stars {
+        .star {
+          width: 18px;
+          height: 18px;
+          line-height: 18px;
+          font-size: 18px;
+        }
+      }
+    }
   }
 }

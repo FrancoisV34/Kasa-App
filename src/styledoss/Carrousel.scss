@@ -9,14 +9,14 @@
   height: 415px;
   border-radius: 25px;
   display: flex;
-}
-.lodging-pic-arrow .carrousel-img {
-  height: 100%;
-  max-height: 415px;
-  object-fit: cover;
-  width: 100%;
-  border-radius: 25px;
-  object-position: center;
+  .carrousel-img {
+    height: 100%;
+    max-height: 415px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 25px;
+    object-position: center;
+  }
 }
 
 .prev-arrow {
@@ -57,4 +57,36 @@
 
 .next-arrow :hover {
   cursor: pointer;
+}
+
+/* media queries */
+@media (max-width: 768px) {
+  .lodging-pic-arrow {
+    max-height: 255px;
+  }
+
+  .carrousel-counter {
+    visibility: hidden;
+  }
+  .prev-arrow {
+    font-size: 750%;
+  }
+
+  .next-arrow {
+    font-size: 750%;
+  }
+}
+
+@media (max-width: 375px) {
+  .lodging-pic-arrow {
+    max-height: 255px;
+  }
+
+  .prev-arrow {
+    font-size: 375%;
+  }
+
+  .next-arrow {
+    font-size: 375%;
+  }
 }

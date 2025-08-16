@@ -1,6 +1,5 @@
 import Logements from "../../logements.json";
 import { useParams } from "react-router-dom";
-import "../styledoss/Description.scss";
 
 function Description() {
   const { logementId } = useParams();

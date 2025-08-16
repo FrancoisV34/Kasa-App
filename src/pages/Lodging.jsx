@@ -18,21 +18,26 @@ function Lodging() {
 
   const lodgeRate = Number(logement.rating);
   const maxRate = 5;
-  const [isDescriptionOpen, setIsDescriptionOpen] = React.useState(false);
-  const toggleDescriptionDropDown = () => setIsDescriptionOpen((prev) => !prev);
-  const [isEquipmentsOpen, setIsEquipmentsOpen] = React.useState(false);
-  const toggleEquipmentsDropDown = () => setIsEquipmentsOpen((prev) => !prev);
 
   return (
     <>
       <div className="lodging-page">
         <Carrousel />
         <div className="lodging-info">
-          <div className="title-hostName-pic">
+          <div className="title-loc-tags">
             <div className="title-loc">
               <h2 className="title">{logement.title}</h2>
               <span className="loc">{logement.location}</span>
             </div>
+            <div className="tags">
+              {logement.tags.map((tag, index) => (
+                <span className="tag" key={index}>
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+          <div className="hostname-pic-rate">
             <div className="name-pic">
               <span className="hostName">{logement.host.name}</span>
               <img
@@ -41,16 +46,6 @@ function Lodging() {
                 className="hostPic"
               />
             </div>
-          </div>
-          <div className="tag-and-rate">
-            <div className="tags">
-              {logement.tags.map((tag, index) => (
-                <span className="tag" key={index}>
-                  {tag}
-                </span>
-              ))}
-            </div>
-
             <div className="rate-stars">
               {Array.from({ length: maxRate }).map((_, index) => {
                 const Filled = index < lodgeRate;
@@ -66,10 +61,10 @@ function Lodging() {
               })}
             </div>
           </div>
-          <div className="drop-down">
-            <AboutDropdown title="Description" description={<Description />} />
-            <AboutDropdown title="Équipements" description={<Equipments />} />
-          </div>
+        </div>
+        <div className="drop-down">
+          <AboutDropdown title="Description" description={<Description />} />
+          <AboutDropdown title="Équipements" description={<Equipments />} />
         </div>
       </div>
     </>
