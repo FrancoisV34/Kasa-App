@@ -1,28 +1,29 @@
 import Logo from "/LOGO.png";
 import "../styledoss/Header.scss";
-import { useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Header() {
-  const navigate = useNavigate();
-
-  function handleHomepageClick() {
-    navigate("/");
-  }
-
-  function handleAproposClick() {
-    navigate("/a-propos");
-  }
-
   return (
     <header>
       <img src={Logo} alt="Kasa Logo" />
       <div className="nav-header">
         <ul>
-          <li role="button" onClick={handleHomepageClick}>
-            Accueil
+          <li>
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Accueil
+            </NavLink>
           </li>
-          <li role="button" onClick={handleAproposClick}>
-            A Propos
+          <li>
+            {" "}
+            <NavLink
+              to="/a-propos"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              A Propos
+            </NavLink>
           </li>
         </ul>
       </div>

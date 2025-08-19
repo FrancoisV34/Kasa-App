@@ -20,7 +20,9 @@ function AboutDropdown({ title, description }) {
           }}
         ></img>
       </button>
-      {isOpen && <div className="desc-content">{description}</div>}
+      <div className={`desc-content ${isOpen ? "open" : ""}`}>
+        {description}
+      </div>
     </div>
   );
 }

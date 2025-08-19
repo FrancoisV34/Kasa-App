@@ -1,13 +1,14 @@
 import AboutDropdown from "../components/AboutDropdown";
 import "../styledoss/About.scss";
 import React from "react";
+import Banner from "../components/Banner";
 
 function About() {
   return (
     <div className="about-content">
-      <div className="about-pic">
+      <Banner>
         <img src="./apropospic.png"></img>
-      </div>
+      </Banner>
       <div className="dropdown-about">
         <AboutDropdown
           title="Fiabilité"

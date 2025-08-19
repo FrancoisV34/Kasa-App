@@ -3,6 +3,9 @@
 @use "../Abstracts/_Mixins.scss" as mix;
 @use "../Abstracts/_Variables.scss" as *;
 
+#root {
+  max-width: 1440px;
+}
 header {
   padding: 45px 100px 50px 100px;
   @include mix.flex-space-between;
@@ -10,15 +13,24 @@ header {
 }
 
 .nav-header {
-  width: 25%;
+  width: 55%;
+  display: flex;
+  justify-content: flex-end;
   ul {
     @include mix.flex-space-between;
+    gap: 57px;
     li {
       list-style: none;
       @include mix.general-text-carac;
       font-size: 24px;
       font-weight: 500;
       cursor: pointer;
+      a {
+        font-size: 24px;
+      }
+      .active {
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -44,6 +56,9 @@ header {
         gap: 26px;
         li {
           font-size: $font-size-mobile;
+          a {
+            font-size: $font-size-mobile;
+          }
         }
       }
     }

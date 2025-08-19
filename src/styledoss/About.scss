@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   height: auto;
-  .about-pic {
+  .welcome-Pic-Text {
     width: 100%;
     height: 40%;
     max-height: 223px;
@@ -50,12 +50,21 @@
       border-radius: 5px;
       color: black;
       border-radius: 0 0 10px 10px;
-      padding: 20px;
+      padding: 0 20px;
       max-width: fit-content;
       margin: 0;
       @include mix.general-text-carac;
       font-weight: 400;
       font-size: 18px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, transform 0.4s ease, padding 0.4s ease;
+      transform: translateY(-8px);
+      &.open {
+        max-height: 500px;
+        transform: translateY(0);
+        padding: 20px;
+      }
     }
   }
 }
@@ -91,7 +100,7 @@
 @media (max-width: 768px) {
   .about-content {
     gap: 19px;
-    .about-pic {
+    .welcome-Pic-Text {
       max-height: 166px;
       img {
         max-height: 166px;
@@ -115,7 +124,7 @@
 @media (max-width: 375px) {
   .about-content {
     gap: 19px;
-    .about-pic {
+    .welcome-Pic-Text {
       max-height: 111px;
       img {
         max-height: 111px;

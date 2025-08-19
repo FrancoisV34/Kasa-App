@@ -10,40 +10,15 @@ import Error from "./pages/Error.jsx";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Layout>
-              <Welcome />
-            </Layout>
-          }
-        />
-        <Route
-          path="/logement/:logementId"
-          element={
-            <Layout>
-              <Lodging />
-            </Layout>
-          }
-        />
-        <Route
-          path="/a-propos"
-          element={
-            <Layout>
-              <About />
-            </Layout>
-          }
-        ></Route>
-        <Route
-          path="*"
-          element={
-            <Layout>
-              <Error />
-            </Layout>
-          }
-        />
-      </Routes>
+      <Layout>
+        {" "}
+        <Routes>
+          <Route path="/" element={<Welcome />} />
+          <Route path="/logement/:logementId" element={<Lodging />} />
+          <Route path="/a-propos" element={<About />}></Route>
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </Layout>
     </Router>
   </React.StrictMode>
 );

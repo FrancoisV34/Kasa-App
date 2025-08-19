@@ -1,16 +1,17 @@
 import WelcomePic from "/welcomepic.png";
 import "../styledoss/Welcome.scss";
 import Gallery from "../components/Gallery.jsx";
+import Banner from "../components/Banner.jsx";
 
 function Welcome() {
   return (
     <div className="main-content">
-      <div className="welcome-Pic-Text">
+      <Banner>
         <img src={WelcomePic} alt="Accueil" />
         <div className="opacifier">
           <h1>Chez vous, partout et ailleurs</h1>
         </div>
-      </div>
+      </Banner>
       <div className="gallery">
         <Gallery />
       </div>
